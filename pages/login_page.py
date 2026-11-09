@@ -31,3 +31,6 @@ class LoginPage(BasePage):
         self.get_username_input().fill(username)
         self.get_password_input().fill(password)
         self.click_sign_in_button()
+
+    def get_error_message(self):
+        return self.page.get_by_text("Incorrect username or password")
